@@ -1,0 +1,1722 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .center     { text-align: center }
+  .right      { text-align: right }
+  .justify    { text-align: justify }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst,
+  p.center,
+  p.right,
+  div.center p,
+  div.right p,
+  p.noindent   { text-indent: 0 }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em 10% }
+  div.caption  { margin: 1.5em 10%; text-align: center; font-style: italic }
+  div.legend   { margin: 1.5em 10% }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  tr.footnote.footnote td, tr.footnote.footnote th { 
+  padding: 0 0.5em 1.5em;
+  }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /*]]>*/
+  </style>
+  <title>PHIL-O-RUM'S CANOE AND MADELEINE VERCHERS</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .lineno       { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="phil-o-rum-s-canoe-and-madeleine-verchers">
+    <h1 class="document-title level-1 pfirst title">PHIL-O-RUM'S CANOE AND MADELEINE VERCHERS</h1><!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container coverpage">
+      <div class="vspace" style="height: 3em"></div>
+      <div class="align-center auto-scaled figure" style="width: 65%" id="figure-46">
+        <span id="cover"></span><img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-cover.jpg" />
+        <div class="caption figure">
+          Cover
+        </div>
+      </div>
+    </div>
+    <div class="align-None container frontispiece">
+      <div class="vspace" style="height: 3em"></div>
+      <div class="align-center auto-scaled figure" style="width: 100%" id="figure-47">
+        <img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-front.jpg" />
+        <div class="caption figure">
+          "O ma ole canoe, wat 's matter wit' you, an' w'y was you be so slow?"
+        </div>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-None center container titlepage white-space-pre-line">
+      <div class="align-center auto-scaled figure white-space-pre-line" style="width: 60%" id="figure-48">
+        <span id="title-page"></span><img class="align-center white-space-pre-line" style="display: block; width: 100%" alt=" " src="images/img-title.jpg" />
+        <div class="caption figure white-space-pre-line">
+          Title page
+        </div>
+      </div>
+      <div class="vspace white-space-pre-line" style="height: 3em"></div>
+      <p class="pfirst white-space-pre-line x-large">Phil-o-rum's<br />
+      Canoe</p>
+      <p class="medium pnext white-space-pre-line">and</p>
+      <p class="pnext white-space-pre-line x-large">Madeleine<br />
+      Vercheres</p>
+      <div class="vspace white-space-pre-line" style="height: 3em"></div>
+      <p class="medium pfirst white-space-pre-line">Two Poems by</p>
+      <p class="medium pnext white-space-pre-line">William<br />
+      Henry<br />
+      Drummond</p>
+      <p class="pnext small white-space-pre-line">Author of "The<br />
+      Habitant," etc.</p>
+      <div class="vspace white-space-pre-line" style="height: 3em"></div>
+      <p class="pfirst small white-space-pre-line">Illustrated by</p>
+      <p class="pnext small white-space-pre-line">Frederick<br />
+      Simpson<br />
+      Coburn</p>
+      <div class="vspace white-space-pre-line" style="height: 4em"></div>
+      <p class="center medium pfirst white-space-pre-line">G. P. PUTNAM'S SONS<br />
+      NEW YORK AND LONDON<br />
+      The Knickerbocker Press<br />
+      1898</p>
+      <div class="vspace white-space-pre-line" style="height: 4em"></div>
+    </div>
+    <div class="align-None center container verso white-space-pre-line">
+      <p class="pfirst small white-space-pre-line">COPYRIGHT, 1898<br />
+      BY<br />
+      G. P. PUTNAM'S SONS<br />
+      Entered at Stationers' Hall, London</p>
+      <div class="vspace white-space-pre-line" style="height: 3em"></div>
+      <p class="pfirst small white-space-pre-line">The Knickerbocker Press, New York</p>
+    </div>
+    <div class="vspace" style="height: 3em"></div>
+    <div class="align-center auto-scaled figure" style="width: 61%" id="figure-49">
+      <img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-001.jpg" />
+      <div class="caption figure">
+        headpiece
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center large pfirst">PHIL-O-RUM'S CANOE.</p>
+    <div class="vspace" style="height: 2em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            "O ma ole canoe, wat 's matter wit' you,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              an' w'y was you be so slow?
+            </div>
+          </div>
+          <div class="line">
+            Don't I work hard enough on de paddle, an'
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              still you don't seem to go--
+            </div>
+          </div>
+          <div class="line">
+            No win' at all on de fronte side, an' current
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              she don't be strong,
+            </div>
+          </div>
+          <div class="line">
+            Den w'y are you lak' lazy feller, too sleepy for
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              move along?
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "I 'member de tam, w'en you jomp de sam'
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              as deer wit' de wolf behin',
+            </div>
+          </div>
+          <div class="line">
+            An' brochet on de top de water, you scare
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              heem mos' off hees min':
+            </div>
+          </div>
+          <div class="line">
+            But fish don't care for you now at all, only jus'
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              mebbe wink de eye,
+            </div>
+          </div>
+          <div class="line">
+            For he know it 's easy git out de way, w'en
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              you was a-passin' by"----
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            I 'm spikin' dis way, jus' de oder day, w'en I 'm
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              out wit' de ole canoe
+            </div>
+          </div>
+          <div class="line">
+            Crossin' de point w'ere I see, las' fall, wan very
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              beeg caribou,
+            </div>
+          </div>
+          <div class="line">
+            Wen somebody say, "Phil-o-rum, mon vieux,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              wat 's matter wit' you youse'f?"
+            </div>
+          </div>
+          <div class="line">
+            An' who do you s'pose was talkin'? W'y de
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              poor ole canoe shese'f.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            O yass, I 'm scare w'en I 'm sittin' dere, an'
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              she 's callin' ma nam' dat way.
+            </div>
+          </div>
+          <div class="line">
+            "Phil-o-rum Juneau, w'y you spik so moche,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              you 're off on de head to-day:
+            </div>
+          </div>
+          <div class="line">
+            Can't be you forget, ole feller, you an' me
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              we're not too young,
+            </div>
+          </div>
+          <div class="line">
+            An' if I 'm lookin' so ole lak' you, I t'ink I
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              will close ma tongue.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "You should feel ashame, for you 're alway
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              blame, w'en it is n't ma fault at all,
+            </div>
+          </div>
+          <div class="line">
+            For I 'm tryin' to do bes' I can for you on
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              summer-tam, spring, an' fall.
+            </div>
+          </div>
+          <div class="line">
+            How offen you drown on de reever, if I 'm
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              not lookin' out for you
+            </div>
+          </div>
+          <div class="line">
+            W'en you 're takin' too moche on de w'isky,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              some night comin' down de Soo.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "De firse tam we go on de Wessoneau, no
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              feller can beat us den
+            </div>
+          </div>
+          <div class="line">
+            For you 're purty strong man wit' de paddle,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              but dat 's long ago, ma frien',
+            </div>
+          </div>
+          <div class="line">
+            An' win' she can blow off de mountain, an'
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              tonder an' rain may come,
+            </div>
+          </div>
+          <div class="line">
+            But camp see us bote on de evening--you
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              know dat was true, Phil-o-rum.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "An' who 's your horse, too, but your ole
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              canoe, an' w'en you feel cole an' wet,
+            </div>
+          </div>
+          <div class="line">
+            Who was your house w'en I 'm upside down,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              an' onder de roof you get,
+            </div>
+          </div>
+          <div class="line">
+            Wit' rain ronnin' down ma back, Baptême! till
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              I 'm gettin' de rheumateez,
+            </div>
+          </div>
+          <div class="line">
+            An' I never say not'ing at all moi-meme, but
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              let you do jus' you please?
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "You t'ink it was right, kip me out all night
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              on reever side down below,
+            </div>
+          </div>
+          <div class="line">
+            An' even 'bon soir' you was never say, but
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              off on de camp you go,
+            </div>
+          </div>
+          <div class="line">
+            Leffin' your poor ole canoe behin', lyin' dere
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              on de groun',
+            </div>
+          </div>
+          <div class="line">
+            Watchin' de moon on de water, an' de bat
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              flyin' all aroun'?
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "Oh, dat's lonesome t'ing hear de grey owl
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              sing up on de beeg pine tree!
+            </div>
+          </div>
+          <div class="line">
+            An' many long night she kip me awake till sun
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              on de Eas' I see,
+            </div>
+          </div>
+          <div class="line">
+            An' den you come down on de morning for
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              start on some more voyage,
+            </div>
+          </div>
+          <div class="line">
+            An' only t'ing decen' you do all day, is carry
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              me on portage.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "Dat 's way, Phil-o-rum, rheumateez she
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              come, wit' pain ronnin' troo' ma side,
+            </div>
+          </div>
+          <div class="line">
+            Wan leetle hole here, 'noder beeg wan dere,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              dat not'ing can never hide,
+            </div>
+          </div>
+          <div class="line">
+            Don't do any good feex me up agen, no matter
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              how moche you try,
+            </div>
+          </div>
+          <div class="line">
+            For w'en we come ole an' our work she 's
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              done, bote man an' canoe mus' die."
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            Wall, she talk dat way mebbe mos' de day till
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              we 're passin' some beaver dam,
+            </div>
+          </div>
+          <div class="line">
+            An' wan de young beaver, he 's mak' hees tail
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              come down on de water Flam!
+            </div>
+          </div>
+          <div class="line">
+            I never see de canoe so scare, she jomp nearly
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              two, t'ree feet,
+            </div>
+          </div>
+          <div class="line">
+            I t'ink she was goin' for ronne away, an' she
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              shut up de mout' toute suite.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            It mak' me feel queer, de strange t'ing I hear,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              an' I 'm glad she don't spik no more,
+            </div>
+          </div>
+          <div class="line">
+            But soon as we fin' ourse'f arrive over dere on
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              de 'noder shore
+            </div>
+          </div>
+          <div class="line">
+            I tak' dat canoe lak' de lady, an' carry her off
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              wit' me,
+            </div>
+          </div>
+          <div class="line">
+            For I 'm sorry de way I 'm treat her, an' she
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              know more dan me, sapree!
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            Yass, dat 's smart canoe, an' I know it 's true,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              w'at she 's spikin' wit' me dat day,
+            </div>
+          </div>
+          <div class="line">
+            I 'm not de young feller I use to be, w'en work
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              she was only play,
+            </div>
+          </div>
+          <div class="line">
+            An' I know I was comin' closer on place w'ere
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              I mus' tak' care,
+            </div>
+          </div>
+          <div class="line">
+            W'ere de mos' worse current 's de las' wan too,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              de current of Dead Riviere.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            You can only steer, an' if rock be near, wit'
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              wave dashin' all aroun',
+            </div>
+          </div>
+          <div class="line">
+            Better mak' leetle prayer, for on Dead Riviere,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              some very smart man get drown;
+            </div>
+          </div>
+          <div class="line">
+            But if you be locky an' watch youse'f, mebbe
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              reever won't seem so wide,
+            </div>
+          </div>
+          <div class="line">
+            An' firse t'ing you know you 'll ronne ashore,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              safe on de 'noder side.
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 3em"></div>
+    <div class="align-center auto-scaled figure" style="width: 38%" id="figure-50">
+      <img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-005.jpg" />
+      <div class="caption figure">
+        tailpiece
+      </div>
+    </div>
+    <div class="vspace" style="height: 3em"></div>
+    <div class="align-center auto-scaled figure" style="width: 61%" id="figure-51">
+      <img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-006.jpg" />
+      <div class="caption figure">
+        headpiece
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center large pfirst">MADELEINE VERCHERES.</p>
+    <div class="vspace" style="height: 2em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            I've told you many a tale, my child, of the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              old heroic days,
+            </div>
+          </div>
+          <div class="line">
+            Of Indian wars and massacre, of villages ablaze
+          </div>
+          <div class="line">
+            With savage torch, from Ville Marie to the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Mission of Trois Rivieres;
+            </div>
+          </div>
+          <div class="line">
+            But never have I told you yet of Madeleine Vercheres.
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            Summer had come with its blossoms, and gaily
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the robin sang,
+            </div>
+          </div>
+          <div class="line">
+            And deep in the forest arches, the axe of the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              woodman rang;
+            </div>
+          </div>
+          <div class="line">
+            Again in the waving meadows, the sun-browned
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              farmers met
+            </div>
+          </div>
+          <div class="line">
+            And out on the green St. Lawrence, the fisherman
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              spread his net.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And so through the pleasant season, till the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              days of October came
+            </div>
+          </div>
+          <div class="line">
+            When children wrought with their parents, and
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              even the old and lame
+            </div>
+          </div>
+          <div class="line">
+            With tottering frames and footsteps, their
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              feeble labors lent
+            </div>
+          </div>
+          <div class="line">
+            At the gathering of the harvest le bon Dieu
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              himself had sent.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            For news there was none of battle, from the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              forts on the Richelieu
+            </div>
+          </div>
+          <div class="line">
+            To the gates of the ancient city, where the flag
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              of King Louis flew;
+            </div>
+          </div>
+          <div class="line">
+            All peaceful the skies hung over the seigneurie
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              of Vercheres,
+            </div>
+          </div>
+          <div class="line">
+            Like the calm that so often cometh ere the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              hurricane rends the air.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And never a thought of danger had the Seigneur,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              sailing away
+            </div>
+          </div>
+          <div class="line">
+            To join the soldiers of Carignan, where down
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              at Quebec they lay,
+            </div>
+          </div>
+          <div class="line">
+            But smiled on his little daughter, the maiden
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Madeleine,
+            </div>
+          </div>
+          <div class="line">
+            And a necklet of jewels promised her, when
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              home he should come again.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And ever the days passed swiftly, and careless
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the workmen grew,
+            </div>
+          </div>
+          <div class="line">
+            For the months they seemed a hundred since
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the last war-bugle blew.
+            </div>
+          </div>
+          <div class="line">
+            Ah, little they dreamt on their pillows the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              farmers of Vercheres,
+            </div>
+          </div>
+          <div class="line">
+            That the wolves of the southern forest had
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              scented the harvest fair.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            Like ravens they quickly gather, like tigers
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              they watch their prey.
+            </div>
+          </div>
+          <div class="line">
+            Poor people! with hearts so happy, they sang
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              as they toiled away!
+            </div>
+          </div>
+          <div class="line">
+            Till the murderous eyeballs glistened, and the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              tomahawk leaped out
+            </div>
+          </div>
+          <div class="line">
+            And the banks of the green St. Lawrence
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              echoed the savage shout.
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 3em"></div>
+    <div class="align-center auto-scaled figure" style="width: 91%" id="figure-52">
+      <img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-008.jpg" />
+      <div class="caption figure">
+        Like tigers they watch their prey.
+      </div>
+    </div>
+    <div class="vspace" style="height: 3em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            "O mother of Christ, have pity!" shrieked the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              women in despair;
+            </div>
+          </div>
+          <div class="line">
+            "This is no time for praying," cried the young
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Madeleine Vercheres;
+            </div>
+          </div>
+          <div class="line">
+            "Aux armes! aux armes! les Iroquois! quick
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              to your arms and guns,
+            </div>
+          </div>
+          <div class="line">
+            Fight for your God and country, and the lives
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              of the innocent ones."
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And she sped like a deer of the mountain, when
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              beagles press close behind,
+            </div>
+          </div>
+          <div class="line">
+            And the feet that would follow after must be
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              swift as the prairie wind.
+            </div>
+          </div>
+          <div class="line">
+            Alas! for the men and women and little ones
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              that day,
+            </div>
+          </div>
+          <div class="line">
+            For the road it was long and weary, and the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              fort it was far away.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            But the fawn had outstripped the hunters, and
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the palisades drew near,
+            </div>
+          </div>
+          <div class="line">
+            And soon from the inner gateway the war-bugle
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              rang out clear,
+            </div>
+          </div>
+          <div class="line">
+            Gallant and clear it sounded, with never a note
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              of despair--
+            </div>
+          </div>
+          <div class="line">
+            'T was a soldier of France's challenge, from
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the young Madeleine Vercheres!
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "And this is my little garrison, my brothers
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Louis and Paul?
+            </div>
+          </div>
+          <div class="line">
+            With soldiers two, and a cripple? may the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Virgin pray for us all!
+            </div>
+          </div>
+          <div class="line">
+            But we 've powder and guns in plenty, and
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              we 'll fight to the latest breath,
+            </div>
+          </div>
+          <div class="line">
+            And if need be, for God and country, die a
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              brave soldier's death.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            "Load all the carabines quickly, and whenever
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              you sight the foe
+            </div>
+          </div>
+          <div class="line">
+            Fire from the upper turret and loopholes down below,
+          </div>
+          <div class="line">
+            Keep up the fire, brave soldiers, though the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              fight may be fierce and long,
+            </div>
+          </div>
+          <div class="line">
+            And they 'll think our little garrison is more
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              than a hundred strong."
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            So spake the maiden Madeleine, and she roused
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the Norman blood
+            </div>
+          </div>
+          <div class="line">
+            That seemed for a moment sleeping, and sent
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              it like a flood
+            </div>
+          </div>
+          <div class="line">
+            Through every heart around her, and they
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              fought the red Iroquois
+            </div>
+          </div>
+          <div class="line">
+            As fought in the old-time battles the soldiers
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              of Carignan.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And they say the black clouds gathered, and a
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              tempest swept the sky,
+            </div>
+          </div>
+          <div class="line">
+            And the roar of the thunder mingled with the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              forest tiger's cry,
+            </div>
+          </div>
+          <div class="line">
+            But still the garrison fought on, while the lightning's
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              jagged spear
+            </div>
+          </div>
+          <div class="line">
+            Tore a hole in the night's dark curtain, and
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              showed them a foeman near.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And the sun rose up in the morning, and the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              color of blood was he,
+            </div>
+          </div>
+          <div class="line">
+            Gazing down from the heavens on the little
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              company
+            </div>
+          </div>
+          <div class="line">
+            "Behold, my friends," cried the maiden,
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              "'t is a warning lest we forget,
+            </div>
+          </div>
+          <div class="line">
+            Though the night saw us do our duty, our
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              work is not finished yet."
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And six days followed each other, and feeble
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              her limbs became
+            </div>
+          </div>
+          <div class="line">
+            Yet the maid never sought her pillow, and the
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              flash of the carabine's flame
+            </div>
+          </div>
+          <div class="line">
+            Illumined the powder-smoked faces, aye, even
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              when hope seemed gone,
+            </div>
+          </div>
+          <div class="line">
+            And she only smiled on her comrades, and told
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              them to fight, fight on.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And she blew a blast on the bugle, and lo!
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              from the forest black.
+            </div>
+          </div>
+          <div class="line">
+            Merrily, merrily ringing, an answer came
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              pealing back.
+            </div>
+          </div>
+          <div class="line">
+            Oh, pleasant and sweet it sounded, borne on
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the morning air,
+            </div>
+          </div>
+          <div class="line">
+            For it heralded fifty soldiers, with gallant De
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              la Monnière.
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 3em"></div>
+    <div class="align-center auto-scaled figure" style="width: 99%" id="figure-53">
+      <img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-010.jpg" />
+      <div class="caption figure">
+        "Saluted the brave young captain."
+      </div>
+    </div>
+    <div class="vspace" style="height: 3em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            And when he beheld the maiden, the soldier of
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Carignan,
+            </div>
+          </div>
+          <div class="line">
+            And looked on the little garrison that fought
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the red Iroquois
+            </div>
+          </div>
+          <div class="line">
+            And held their own in the battle, for six long
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              weary days,
+            </div>
+          </div>
+          <div class="line">
+            He stood for a moment speechless, and marvelled
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              at woman's ways.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            Then he beckoned the men behind him, and
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              steadily they advance
+            </div>
+          </div>
+          <div class="line">
+            And with carabines uplifted the veterans of
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              France
+            </div>
+          </div>
+          <div class="line">
+            Saluted the brave young Captain so timidly
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              standing there,
+            </div>
+          </div>
+          <div class="line">
+            And they fired a volley in honor of Madeleine
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Vercheres.
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+          <div class="line">
+            And this, my dear, is the story of the maiden
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              Madeleine.
+            </div>
+          </div>
+          <div class="line">
+            God grant that we in Canada may never see
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              again
+            </div>
+          </div>
+          <div class="line">
+            Such cruel wars and massacre, in waking or in
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              dream,
+            </div>
+          </div>
+          <div class="line">
+            As our fathers and mothers saw, my child, in
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              the days of the old régime!
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 3em"></div>
+    <div class="align-center auto-scaled figure" style="width: 38%" id="figure-54">
+      <img class="align-center" style="display: block; width: 100%" alt=" " src="images/img-012.jpg" />
+      <div class="caption figure">
+        tailpiece
+      </div>
+    </div>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
